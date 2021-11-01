@@ -87,26 +87,42 @@ function createScreenSizesString(sizesArray) {
 
 const singleTvContainer = document.getElementById('single-tv');
 
-singleTvContainer.innerHTML = `
-  <h3>${createTvName(inventory[3])}</h3>
-  <h4>${createTvPrice(inventory[3].price)}</h4>
-  <p>${createScreenSizesString(inventory[3].availableSizes)}</p>
-`;
+const exampleTvName = document.createElement('h3');
+exampleTvName.textContent = createTvName(inventory[3]);
+singleTvContainer.appendChild(exampleTvName);
+
+const exampleTvPrice = document.createElement('h4');
+exampleTvPrice.textContent = createTvPrice(inventory[3].price)
+singleTvContainer.appendChild(exampleTvPrice);
+
+const tvSizes = document.createElement('p');
+tvSizes.textContent = createScreenSizesString(inventory[3].availableSizes);
+singleTvContainer.appendChild(tvSizes);
+
+// ** -------------------------------------------------- **
+// 4e: Schrijf een functie die ALLE tv's weergeeft op de pagina zoals in het voorbeeld.
+// ** -------------------------------------------------- **
 
 function generateTvList(tvArray) {
   const tvModelList = document.getElementById('inventory-models');
 
-  const modelItems = tvArray.map((tvObject) => {
-    return `
-      <li>
-        <h3>${createTvName(tvObject)}</h3>
-        <h4>${createTvPrice(tvObject.price)}</h4>
-        <p>${createScreenSizesString(tvObject.availableSizes)}</p>
-      </li>
-    `;
-  });
+  tvArray.map((tv) => {
+    const tvModelItem = document.createElement('li');
 
-  tvModelList.innerHTML = `${modelItems.join('')}`;
+    const tvName = document.createElement('h3');
+    tvName.textContent = createTvName(tv);
+    tvModelItem.appendChild(tvName);
+
+    const tvPrice = document.createElement('h4');
+    tvPrice.textContent = createTvPrice(tv.price)
+    tvModelItem.appendChild(tvPrice);
+
+    const tvSizes = document.createElement('p');
+    tvSizes.textContent = createScreenSizesString(tv.availableSizes);
+    tvModelItem.appendChild(tvSizes);
+
+    return tvModelList.appendChild(tvModelItem);
+  });
 }
 
 generateTvList(inventory);

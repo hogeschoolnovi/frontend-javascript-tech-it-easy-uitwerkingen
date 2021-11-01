@@ -24,15 +24,19 @@ console.log(soldItems);
 // PSEUDO-CODE
 // maak een element in de HTML die we als 'anker' kunnen gebruiken in ons script
 // sla de referentie naar dat element op in ons script
-// maak twee nieuwe elementen (bijvoorbeeld h3 en h2 waarin we de beschrijving en hoeveelheid items kunnen plaatsen, en zet dit in ons 'anker' element*/
+// maak twee nieuwe elementen (bijvoorbeeld h3 en h2) waarin we de beschrijving en hoeveelheid items kunnen plaatsen
+// Voeg deze toe aan ons 'anker' element
 // schrijf styling voor de id van het item
 
 const soldItemsContainer = document.getElementById('items-sold');
 
-soldItemsContainer.innerHTML = `
-  <h3>Aantal verkochte items<h3>
-  <h2>${soldItems}</h2>
-`;
+const soldItemsTitle = document.createElement('h3');
+soldItemsTitle.textContent = 'Aantal verkochte items';
+const soldItemsAmount = document.createElement('h2');
+soldItemsAmount.textContent = soldItems;
+
+soldItemsContainer.appendChild(soldItemsTitle);
+soldItemsContainer.appendChild(soldItemsAmount);
 
 // ** -------------------------------------------------- **
 // 2c: Hoeveel tv's heeft Tech It Easy ingekocht?
@@ -59,15 +63,19 @@ console.log(originalItems);
 // PSEUDO-CODE
 // maak een element in de HTML die we als 'anker' kunnen gebruiken in ons script
 // sla de referentie naar dat element op in ons script
-// maak twee nieuwe elementen (bijvoorbeeld h3 en h2 waarin we de beschrijving en hoeveelheid items kunnen plaatsen, en zet dit in ons 'anker' element*/
+// maak twee nieuwe elementen (bijvoorbeeld h3 en h2) waarin we de beschrijving en hoeveelheid items kunnen plaatsen
+// Voeg deze toe aan ons 'anker' element
 // schrijf styling voor de id van het item
 
 const originalItemsContainer = document.getElementById('original-items');
 
-originalItemsContainer.innerHTML = `
-  <h3>Aantal ingekochte items<h3>
-  <h2>${originalItems}</h2>
-`;
+const originalItemsTitle = document.createElement('h3');
+originalItemsTitle.textContent = 'Aantal verkochte items';
+const originalItemsAmount = document.createElement('h2');
+originalItemsAmount.textContent = soldItems;
+
+originalItemsContainer.appendChild(originalItemsTitle);
+originalItemsContainer.appendChild(originalItemsAmount);
 
 // ** -------------------------------------------------- **
 // 2e: Geef in het rood weer hoeveel tv's er nog verkocht moeten worden.
@@ -76,12 +84,16 @@ originalItemsContainer.innerHTML = `
 // PSEUDO-CODE
 // maak een element in de HTML die we als 'anker' kunnen gebruiken in ons script
 // sla de referentie naar dat element op in ons script
-// maak twee nieuwe elementen (bijvoorbeeld h3 en h2 waarin we de beschrijving en hoeveelheid items kunnen plaatsen, en zet dit in ons 'anker' element*/
+// maak twee nieuwe elementen (bijvoorbeeld h3 en h2) waarin we de beschrijving en hoeveelheid items kunnen plaatsen
+// Voeg deze toe aan ons 'anker' element
 // schrijf styling voor de id van het item
 
 const itemsToSellContainer = document.getElementById('items-left-to-sell');
 
-itemsToSellContainer.innerHTML = `
-  <h3>Items te verkopen<h3>
-  <h2>${originalItems - soldItems}</h2>
-`;
+const toSellItemsTitle = document.createElement('h3');
+toSellItemsTitle.textContent = 'Aantal verkochte items';
+const toSellItemsAmount = document.createElement('h2');
+toSellItemsAmount.textContent = `${originalItems - soldItems}`;
+
+itemsToSellContainer.appendChild(toSellItemsTitle);
+itemsToSellContainer.appendChild(toSellItemsAmount);
