@@ -31,9 +31,7 @@ In de `inventory` array (in `main.js`) vind je 8 tv-objecten. Elk tv-object beva
 
 1. Koppel jouw javaScript bestand met de HTML pagina. Doe dit ook voor het CSS bestand.
 2. Voel je vrij om voor iedere opdracht een nieuw `.js` bestand te maken indien jouw bestand anders te groot wordt.
-   Houdt er wel rekening mee dat je ieder afzonderlijk `.js` bestand moet koppelen via een `<script>`-tag in de HTML, én
-   dat je telkens opnieuw het `inventory` object bovenaan het bestand moet kopiëren. Dit is inderdaad onhandig, maar
-   niet op te lossen tot je meer weet over dependencies (volgende les).
+   Houdt er wel rekening mee dat je ieder afzonderlijk `.js` bestand moet koppelen via een `<script>`-tag in de HTML.
 3. Vergeet niet dat je bij iedere wijziging eerst moet opslaan en de browser moet refreshen. `Nodemon` is niet meer
    nodig omdat we JavaScript nu in de browser gaan gebruiken (waar het voor bedoeld is)
 4. Schrijf voor alle onderstaande opdrachten eerst **stap voor stap de psuedo-code uit**.
