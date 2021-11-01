@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;500&display=swap');
+
+body {
+    font-family: 'Zen Kaku Gothic New', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.page-container {
+    flex-basis: 1200px;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.dashboard-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dashboard-container article {
+    border-radius: 4px;
+    padding: 16px;
+    text-align: center;
+    flex-basis: 300px;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+#items-sold {
+    border: 1px solid #2A9D8F;
+    color: #2A9D8F;
+    background-color: #EFFBF9;
+}
+
+#original-items {
+    border: 1px solid #47829A;
+    color: #47829A;
+    background-color: #F1F6F9;
+}
+
+#items-left-to-sell {
+    border: 1px solid #E24D28;
+    color: #E24D28;
+    background-color: #FDF0ED;
+}
+
+#inventory-models {
+    list-style-type: none;
+    padding: 0;
+}
+
+#single-tv {
+    border: 1px dashed black;
+    border-radius: 4px;
+    padding: 0 16px;
+    background-color: #ededed;
+    margin: 8px 0;
+}
+
+#inventory-models li {
+    border: 1px solid #E9C46A;
+    border-radius: 4px;
+    padding: 0 16px;
+    background-color: #FCF8ED;
+    margin: 8px 0;
+}

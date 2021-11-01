@@ -52,6 +52,7 @@ In de `inventory` array (in `main.js`) vind je 8 tv-objecten. Elk tv-object beva
   console.
 
 #### Opdracht 2 - Elementen in de DOM plaatsen
+
 _Tip_: wanneer we meerdere waardes uit een array willen terugbrengen tot één getal of één string, gebruik je hier gewoon
 een oude vertrouwde for-loop voor!
 
@@ -63,14 +64,15 @@ een oude vertrouwde for-loop voor!
 * **Opdracht 2e:** Geef _in het rood_ weer hoeveel tv's er nog verkocht moeten worden.
 
 #### Opdracht 3 - Array methoden en functies
+
 * **Opdracht 3a:** Gebruik een array-methode om alle tv merken (zoals `Philips`, `NIKKEI`, etc.) in een lijst op de
   pagina weer te geven. Zorg ervoor dat dit ook zou werken als we 200 tv's in onze array zouden hebben staan. Dat er
   dubbele namen in zitten, is niet erg.
-* **Opdracht 4b:** Schrijf de code uit 4a om naar een functie die een array met tv-objecten verwacht. Het is handig om
+* **Opdracht 3b:** Schrijf de code uit 4a om naar een functie die een array met tv-objecten verwacht. Het is handig om
   onze scripts als functies op te zetten, zodat we ze gemakkelijk kunnen hergebruiken. _Tip_: vergeet deze functie
   -declaratie niet aan te roepen!
 
-#### Opdracht 5 - Functies
+#### Opdracht 4 -Functies
 
 Maak deze gehele opdracht eerst alsof je het voor één tv doet. We gaan één tv weergeven in het volgende format:
 
@@ -84,16 +86,16 @@ Maak deze gehele opdracht eerst alsof je het voor één tv doet. We gaan één t
   32 inch (81 cm)
   ```
 
-* **Opdracht 5a:** Zorg ervoor dat er een string wordt gegenereerd voor de naam van een tv. Maak een functie die één
+* **Opdracht 4a:** Zorg ervoor dat er een string wordt gegenereerd voor de naam van een tv. Maak een functie die één
   enkel tv-object (zoals `inventory[0]` of `inventory[6]`) verwacht en de naam op de volgende manier
   samenvoegt: `[merk] [type] - [naam]` zoals `Philips 43PUS6504/12 - 4K TV` of `NIKKEI NH3216SMART - HD smart TV`. Test
   of jouw functie ook werkt wanneer er een ander tv object wordt meegegeven.
 
-* **Opdracht 5b:** Zorg ervoor dat de prijs van een tv netjes geformat wordt. Maak een functie die één tv-prijs als
+* **Opdracht 4b:** Zorg ervoor dat de prijs van een tv netjes geformat wordt. Maak een functie die één tv-prijs als
   parameter verwacht (zoals `379`) en daar de volgende string van maakt: `€379,-`. Test of jouw functie ook werkt
   wanneer er een andere tv-prijs wordt meegegeven.
 
-* **Opdracht 5c:** Zorg ervoor dat er een string wordt gegenereerd voor alle beschikbare schermgroottes van één tv, in
+* **Opdracht 4c:** Zorg ervoor dat er een string wordt gegenereerd voor alle beschikbare schermgroottes van één tv, in
   zowel _inches_ als _cm_. Doe dit door een functie te schrijven die één screen-sizes array verwacht (
   zoals `inventory[0].availableSizes`) en de groottes op de volgende manier
   samenvoegt: `[schermgrootte] inches ([schermgrootte omgerekend]cm) | [schermgrootte] inches ([schermgrootte omgerekend]cm)`
@@ -101,10 +103,10 @@ Maak deze gehele opdracht eerst alsof je het voor één tv doet. We gaan één t
   schermgroottes heeft (`[43, 50, 55, 58]`) wordt de output `43 inch (109 cm) | 50 inch (127 cm) | 58 inch (147 cm)`.
   Test of jouw functie werkt in alle mogelijke gevallen.
 
-* **Opdracht 5d:** Zorg ervoor de informatie van één van de tv's zoals het voorbeeld wordt weergegeven op de pagina.
+* **Opdracht 4d:** Zorg ervoor de informatie van één van de tv's zoals het voorbeeld wordt weergegeven op de pagina.
   Gebruik hiervoor de functies die je hebt gemaakt in opdracht 5a, 5b en 5c.
 
-* **Opdracht 5e:** Schrijf een functie die ALLE tv's weergeeft op de pagina zoals in het voorbeeld. Dit wil je
+* **Opdracht 4e:** Schrijf een functie die ALLE tv's weergeeft op de pagina zoals in het voorbeeld. Dit wil je
   natuurlijk niet acht keer opnieuw schrijven, want nu zijn het 8 tv's, maar in de toekomst misschien wel 200!
   Gebruik in deze functie de voorgaande functies die je hebt geschreven, om onderdelen van de data te formatten. De
   overkoepelende "tv-generator-functie" verwacht één parameter: de volledige array met tv-objecten. Vergeet 'm niet aan
@@ -112,7 +114,9 @@ Maak deze gehele opdracht eerst alsof je het voor één tv doet. We gaan één t
 
 #### Bonusopdracht
 
-Maak drie knoppen op de pagina: `Sorteer op prijs`, `AmbiLight TV's` en `Uitverkochte exemplaren`. Gebruik de code die
-je in opdracht 2b, 2c en 2d hebt gemaakt en schrijf dit om naar functies zodat je ze kunt aanroepen op het moment dat de
-buttons geklikt worden. Zorg ervoor dat de functies de uitkomsten in de de console loggen als de gebruiker op de
-bijbehorende knop klikt. _Tip_: lees hiervoor paragraaf 7.4 op EdHub eens door!
+1. Maak drie knoppen op de pagina: `Sorteer op prijs`, `AmbiLight TV's` en `Uitverkochte exemplaren`. Gebruik de code
+   die je in opdracht 2b, 2c en 2d hebt gemaakt en schrijf dit om naar functies zodat je ze kunt aanroepen op het moment
+   dat de buttons geklikt worden. Zorg ervoor dat de functies de uitkomsten in de de console loggen als de gebruiker op
+   de bijbehorende knop klikt. _Tip_: lees hiervoor paragraaf 7.4 op EdHub eens door!
+2. Zorg er nu voor, in plaats van dat de uitkomsten in de console worden gelogd, dat de uitkomsten worden meegegeven aan
+   jouw `generateTV`-functie zodat de resultaten daadwerkelijk op de pagina weergegeven worden!
