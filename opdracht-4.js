@@ -72,18 +72,16 @@ function createScreenSizesString(sizesArray) {
 // PSEUDO-CODE
 // 1. maak een element in de HTML die we als 'anker' kunnen gebruiken in ons script (<div id="single-tv"></div> gemaakt)
 // 2. sla de referentie naar dit element op
-// 3. Maak een HTML element (<h3>) aan voor de naam van de tv
-//      genereer de tv naam met de functie uit 4a
-//      stop deze naam als tekst in het element
-//      voeg het element aan het <div> element toe
-// 4. maak een HTML element (<h4>) aan voor de prijs van de tv
-//      genereer de tv prijs met de functie uit 4b
-//      stop deze string als tekst in het element
-//      voeg het element aan het <div> element toe
-// 5. maak een HTML element (<p>) aan voor de schermgroottes van de tv
-//      genereer de schermgroottes-string met de functie uit 4c
-//      stop deze string als tekst in het element
-//      voeg het element aan het <div> element toe
+// 3. overschrijf de innerHTML van dit element met de volgende elementen:
+//    4. een <h3> element voor de naam van de tv
+//        genereer de tv naam met de functie uit 4a
+//        stop deze naam als tekst in het element
+//    5. een <h4> element voor de prijs van de tv
+//        genereer de tv prijs met de functie uit 4b
+//        stop deze string als tekst in het element
+//    6. maak een HTML element (<p>) aan voor de schermgroottes van de tv
+//        genereer de schermgroottes-string met de functie uit 4c
+//        stop deze string als tekst in het element
 
 const singleTvContainer = document.getElementById('single-tv');
 
@@ -92,6 +90,27 @@ singleTvContainer.innerHTML = `
   <h4>${createTvPrice(inventory[3].price)}</h4>
   <p>${createScreenSizesString(inventory[3].availableSizes)}</p>
 `;
+
+// ** -------------------------------------------------- **
+// 4e: Schrijf een functie die ALLE tv's weergeeft op de pagina zoals in het voorbeeld
+// ** -------------------------------------------------- **
+
+// PSEUDO-CODE
+// 1. maak een element in de HTML die we als 'anker' kunnen gebruiken in ons script (<ul id="inventory-models"></ul> gemaakt)
+// 2. sla de referentie naar dit element op
+// 3. maak een variabele aan om alle <li>'s in op te kunnen slaan
+// 4. map over de tv-array heen en zorg dat je voor iedere tv in de array een <li> maakt met daarin:
+//    5. een <h3> element voor de naam van de tv
+//        genereer de tv naam met de functie uit 4a
+//        stop deze naam als tekst in het element
+//    6. een <h4> element voor de prijs van de tv
+//        genereer de tv prijs met de functie uit 4b
+//        stop deze string als tekst in het element
+//    7. maak een HTML element (<p>) aan voor de schermgroottes van de tv
+//        genereer de schermgroottes-string met de functie uit 4c
+//        stop deze string als tekst in het element
+// 8. ten slotte gebruik je deze array met <li>'s om de innerHTML van onze lijst <ul> te overschrijven
+// 9. is dit gelukt? Dan zetten we er een functie omheen!
 
 function generateTvList(tvArray) {
   const tvModelList = document.getElementById('inventory-models');
